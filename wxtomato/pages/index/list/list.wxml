@@ -1,0 +1,14 @@
+<view class='items'>
+  <view class='item' wx:for="{{data}}">
+    <view class='item-title' bindtouchstart='moveLeft' data-index="{{index}}">
+      <text class='title'>{{item.name}}</text>
+      <text class='more'>></text>
+    </view>
+    <view class='delete hidden' wx:if="{{listType=='frequent'}}">
+      删除
+    </view>
+  </view>
+</view>
+<view class='new-tomato' wx:if="{{listType == 'frequent' }}">
+  <button class='new-tomato-btn' bindtap='addNewTomato'>新增场景</button>
+</view>

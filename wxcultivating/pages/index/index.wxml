@@ -1,0 +1,29 @@
+<view class="main">
+  <image class="main-bg" src="../../img/index_bg.png" mode="widthFix"></image>
+  <view class='main-menu'>
+    <navigator class='main-menu-item main-menu-item-bottom main-menu-item-right'>
+      <image src='../../img/tomato.png' mode="widthFix"></image>
+      <text>番茄时间</text>
+    </navigator>
+    <navigator class='main-menu-item main-menu-item-bottom'>
+      <image src='../../img/habit.png' mode="widthFix"></image>
+      <text>习惯养成</text>
+    </navigator>
+    <navigator class='main-menu-item main-menu-item-bottom main-menu-item-right'>
+      <image src='../../img/todo.png' mode="widthFix"></image>
+      <text>任务列表</text>
+    </navigator>
+    <navigator class='main-menu-item main-menu-item-bottom'>
+      <image src='../../img/goal.png' mode="widthFix"></image>
+      <text>目标计划</text>
+    </navigator>
+    <navigator class='main-menu-item main-menu-item-right'>
+      <image src='../../img/statistic.png' mode="widthFix"></image>
+      <text>统计分析</text>
+    </navigator>
+    <navigator class='main-menu-item'>
+      <image src='../../img/more.png' mode="widthFix"></image>
+      <text>正在捣鼓</text>
+    </navigator>
+  </view>
+</view>

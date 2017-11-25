@@ -1,0 +1,54 @@
+<view class="main">
+  <view class='user-info'>
+    <image src="{{userInfo.avatarUrl}}" mode="widthFix" class='user-avatar'></image>
+    <text class='user-name'>{{ userInfo.nickName }}</text>
+    <text class='user-id'>{{ userInfo.id }}</text>
+  </view>
+  <view class='cycle statictis'>
+    <view class='total'>
+      <text>总次数: <text class='total-n'>{{statictisData.total.count}}</text></text>
+      <text>总时长: <text class='total-n'>{{statictisData.total.duration}}</text></text>
+    </view>
+    <view class='label'>
+      <view class='label-item'>
+        <view class='label-item-bg red'></view>
+        <text>STUDY</text>
+      </view>
+      <view class='label-item'>
+        <view class='label-item-bg orange'></view>
+        <text>WORK</text>
+      </view>
+      <view class='label-item'>
+        <view class='label-item-bg yellow'></view>
+        <text>GAME</text>
+      </view>
+      <view class='label-item'>
+        <view class='label-item-bg green'></view>
+        <text>THINK</text>
+      </view>
+      <view class='label-item'>
+        <view class='label-item-bg blue'></view>
+        <text>READ</text>
+      </view>
+      <view class='label-item'>
+        <view class='label-item-bg purple'></view>
+        <text>SPORT</text>
+      </view>
+    </view>
+    <view class='total total-pie'>
+      <canvas canvas-id="targetCountCanvas" style="width: 340rpx; height: 340rpx;"></canvas>
+      <canvas canvas-id="targetdurationCanvas" style="width: 340rpx; height: 340rpx;"></canvas>
+    </view>
+  </view>
+  <view class='cycle duration'>
+    <view class='cycle-btn-right'>
+      <view bindtap='setCycle' data-cycle='month'>月</view>
+      <view bindtap='setCycle' data-cycle='week'>周</view>
+      <view bindtap='setCycle' data-cycle='day'>日</view>
+    </view>
+    <canvas canvas-id="durationCanvas" style="margin:0 auto; width: 700rpx; height: 350rpx;"></canvas>
+    <view class='text-center canvas-title'>时长</view>
+    <canvas canvas-id="countCanvas" style="margin:0 auto; width: 700rpx; height: 350rpx;"></canvas>
+    <view class='text-center canvas-title'>次数</view>
+  </view>
+</view>

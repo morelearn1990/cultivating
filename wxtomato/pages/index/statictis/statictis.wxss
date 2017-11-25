@@ -1,0 +1,113 @@
+.main {
+  padding: 0 20rpx;
+}
+
+.user-info {
+  width: 100%;
+  height: 300rpx;
+  overflow: hidden;
+}
+
+.user-info image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 20rpx auto;
+}
+
+.user-info text {
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-weight: lighter;
+  font-size: 36rpx;
+}
+
+text.user-id {
+  color: #eba3a6;
+  font-size: 12px;
+}
+
+.label {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.label-item {
+  width: 30%;
+  font-size: 24rpx;
+  height: 30rpx;
+  margin: 5rpx 0;
+  color: #eba3a6;
+}
+
+.label-item-bg {
+  height: 100%;
+  width: 30%;
+  display: inline-block;
+  margin: 0 30rpx;
+}
+
+.red {
+  background-color: rgb(255, 99, 132);
+}
+
+.orange {
+  background-color: rgb(255, 159, 64);
+}
+
+.yellow {
+  background-color: rgb(255, 205, 86);
+}
+
+.green {
+  background-color: rgb(75, 192, 192);
+}
+
+.blue {
+  background-color: rgb(54, 162, 235);
+}
+
+.purple {
+  background-color: rgb(153, 102, 255);
+}
+
+.cycle {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.total {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  color: #eba3a6;
+  padding: 10rpx 0;
+}
+.total-n {
+  color: #d95459;
+}
+.cycle-btn-right {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 50rpx;
+  justify-content: flex-end;
+  padding: 10rpx 0;
+  font-size: 36rpx;
+  color: #fff;
+}
+.cycle-btn-right view {
+  height: 100%;
+  width: 100rpx;
+  text-align: center;
+  background-color: #eba3a6;
+  border-radius: 2px;
+  margin: 0 10rpx;
+}
+.canvas-title {
+  color: #eba3a6;
+}

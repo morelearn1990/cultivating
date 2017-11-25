@@ -1,0 +1,43 @@
+.find-item{
+  width: 750rpx;
+  height: 140rpx;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.find-item .info{
+  position: absolute;
+}
+.find-item .avator{
+  width: 110rpx;
+  height: 110rpx;
+  background-color: #ddd;
+  top: 15rpx;
+  left: 20rpx;
+}
+.find-item .name{
+  top: 15rpx;
+  left: 170rpx;
+  color: #999;
+}
+.find-item .last-time{
+  bottom: 15rpx;
+  left: 170rpx;
+  color: #999;
+}
+.find-item .mark{
+  top: 20rpx;
+  left: 400rpx;
+  font-size: 60rpx;
+  color: #444;
+}
+.find-item .thumbs-up{
+  bottom: 20rpx;
+  right: 90rpx;
+  color: #999;
+}
+.find-item .thumbs-up-ico{
+  width: 40rpx;
+  height: 40rpx;
+  bottom: 25rpx;
+  right: 40rpx;
+}

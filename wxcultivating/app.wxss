@@ -1,0 +1,35 @@
+.notify-number{
+  position: absolute;
+  top: 10rpx;
+  left: 90rpx;
+  background-color: red;
+  display: block;
+  border-radius: 50%;
+  height: 15rpx;
+  width: 15rpx;
+}
+.blue{
+  color: blue;
+}
+.text-left{
+  display: block;
+  float: left;
+}
+.text-right{
+  display: block;
+  float: right;
+}
+.margin-right-20{
+  margin-right: 20rpx;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+.clearfloat::before{
+  content: '';
+  display: block;
+  clear: both;
+}

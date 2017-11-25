@@ -1,0 +1,41 @@
+.main{
+  position: relative;
+  font-weight: lighter;
+}
+.time{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 180rpx;
+  margin: 180rpx 0 20rpx;
+}
+.title{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #F4D3D4;
+}
+.btn-group{
+  width: 300rpx;
+  margin: 150rpx auto 0;
+}
+.btn-group button{
+  margin-bottom: 40rpx;
+  border-radius: 5px;
+}
+.running{
+  background-color: #fff;
+  color: #D95459;
+}
+.cancel{
+  background-color: #D95459;
+  color: #fff;
+  border-color: #fff;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+}
+.cancel::after{
+  border: none;
+}

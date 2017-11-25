@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/statistic/statistic",
+
+    "pages/index/goal/goal",
+    "pages/index/goal/edit/edit",
+
+    "pages/index/todolist/todolist",
+    "pages/index/todolist/edit/edit",
+
+    "pages/usr/usr",
+    "pages/usr/settings/settings",
+    "pages/usr/notify/notify",
+    "pages/usr/about/about",
+    "pages/usr/appreciate/appreciate",
+    
+    "pages/find/find",
+    "pages/find/detail/detail",
+    
+    "pages/logs/logs"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "cultivating",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#eee"
+  },
+  "tabBar": {
+    "color":"#8B8C8B",
+    "selectedColor":"#588C73",
+    "backgroundColor":"#fff",
+    "borderStyle":"black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "img/index_.png",
+      "selectedIconPath": "img/index.png"
+    },{
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "img/find_.png",
+      "selectedIconPath": "img/find.png"
+    },{
+      "pagePath": "pages/usr/usr",
+      "text": "我",
+      "iconPath": "img/user_.png",
+      "selectedIconPath": "img/user.png"
+    }]
+  },
+  "debug":true
+}

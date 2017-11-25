@@ -1,0 +1,26 @@
+<view class="main">
+  <navigator class='find-item'>
+    <image class='info avator' src='{{}}' mode="widthFix"></image>
+    <text class='info name'>某某</text>
+    <text class='info last-time'>13：30</text>
+    <text class='info mark'>3000</text>
+    <text class='info thumbs-up'>22</text>
+    <image class='info thumbs-up-ico' src="../../img/heart.png"></image>
+  </navigator>
+  <navigator class='find-item'>
+    <image class='info avator' src='{{}}' mode="widthFix"></image>
+    <text class='info name'>某某</text>
+    <text class='info last-time'>13：30</text>
+    <text class='info mark'>3000</text>
+    <text class='info thumbs-up'>22</text>
+    <image class='info thumbs-up-ico' src="../../img/heart.png"></image>
+  </navigator>
+  <navigator class='find-item'>
+    <image class='info avator' src='{{}}' mode="widthFix"></image>
+    <text class='info name'>某某</text>
+    <text class='info last-time'>13：30</text>
+    <text class='info mark'>3000</text>
+    <text class='info thumbs-up'>22</text>
+    <image class='info thumbs-up-ico' src="../../img/heart.png"></image>
+  </navigator>
+</view>

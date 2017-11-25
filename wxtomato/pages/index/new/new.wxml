@@ -1,0 +1,42 @@
+<view class="main">
+  <view class='slide wrapper'>
+    <slider min="5" max="60" value="40" backgroundColor="#fff" activeColor="#fff" show-value bindchange='setTime'/>
+  </view>
+  <view class='des wrapper'>
+    <text class='title'>选择一个场景</text>
+    <text class='tutorial'>接下来的 40 分钟，专注的做这件事</text>
+  </view>
+  <view class='frequent'>
+    <view class='select'>
+      <text>是否常用</text>
+      <switch Color="#fff" checked="{{isFrequent}}" bindchange='setIsFrequent'></switch>
+    </view>
+    <view class='frequent-form' wx:if="{{isFrequent}}">
+      <input maxlength='6' class='input-title' confirm-type='next' placeholder='请输入场景名称' bindinput="setName"></input>
+      <input maxlength='20' class='input-des' confirm-type='done' placeholder='请输入场景描述' bindinput="setDes"></input>
+    </view>
+  </view>
+  <view class='scenes wrapper'>
+    <view class='scene-item {{ target == 1 ? "active" : ""}}' data-target='1' bindtap='setTarget'>
+      学习
+    </view>
+    <view class='scene-item {{ target == 2 ? "active" : ""}}' data-target='2' bindtap='setTarget'>
+      工作
+    </view>
+    <view class='scene-item {{ target == 3 ? "active" : ""}}' data-target='3' bindtap='setTarget'>
+      娱乐
+    </view>
+    <view class='scene-item {{ target == 4 ? "active" : ""}}' data-target='4' bindtap='setTarget'>
+      思考
+    </view>
+    <view class='scene-item {{ target == 5 ? "active" : ""}}' data-target='5' bindtap='setTarget'>
+      运动
+    </view>
+    <view class='scene-item {{ target == 6 ? "active" : ""}}' data-target='6' bindtap='setTarget'>
+      阅读
+    </view>
+  </view>
+  <view class='begin'>
+    <button bindtap='newSubmit'>{{ btn == 'run' ? "开始" : "保存"}}</button>
+  </view>
+</view>

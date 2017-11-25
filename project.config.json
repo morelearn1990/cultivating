@@ -1,0 +1,14 @@
+{
+	"client": "./wxtomato",
+	"svr": "./server",
+	"appid": "wxf04d3e80e757b1ed",
+	"projectname": "wxtomato",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"condition": {}
+}

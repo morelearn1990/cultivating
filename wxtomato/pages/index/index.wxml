@@ -1,0 +1,50 @@
+<view class="main">
+  <view class='user-info'>
+    <image src="{{userInfo.avatarUrl}}" mode="widthFix" class='user-avatar'></image>
+    <text class='user-name'>{{ userInfo.nickName }}</text>
+    <text class='user-id'>{{ userInfo.id }}</text>
+  </view>
+  <view class='wrapper frequent'>
+    <view class='items-header clearfix'>
+      <view bindtap='goToList' data-type='frequent'>
+        <text class='title'>常用番茄时间</text>
+        <!-- <text class='more-icon f-r'>></text> -->
+      </view>
+    </view>
+    <scroll-view class='items-wrapper' scroll-x>
+      <view class='item' wx:for="{{ frequent }}" bindtap='goToRun' data-type="frequent" data-id='{{item.id}}' data-key="{{index}}">
+        <i class='iconfont icon-{{item.ico}}'></i>
+        <text>{{item.name}}</text>
+      </view>
+      <view class='item' bindtap='goToNew' data-type="frequent" data-id='{{item.id}}'>
+        <i class='iconfont icon-add'></i>
+        <text>新增</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='wrapper recommend'>
+    <view class='items-header clearfix'>
+      <view bindtap='goToList' data-type='recommend'>
+        <text class='title'>推荐番茄时间</text>
+        <!-- <text class='more-icon f-r'>></text> -->
+      </view>
+    </view>
+    <scroll-view class='items-wrapper' scroll-x>
+      <view class='item' wx:for="{{ recommend }}" bindtap='goToRun' data-type="recommend" data-id='{{item.id}}' data-key="{{index}}">
+        <i class='iconfont icon-{{item.ico}}'></i>
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='wrapper statistic'>
+    <navigator class='items-header clearfix' url='./statictis/statictis'>
+      <text class='title'>成长值</text>
+      <text class='more-icon f-r'>></text>
+    </navigator>
+  </view>
+</view>
+<navigator url='./new/new'>
+  <view class='new-tomato'>
+    <button class='new-tomato-btn'>新开始一个番茄时间</button>
+  </view>
+</navigator>

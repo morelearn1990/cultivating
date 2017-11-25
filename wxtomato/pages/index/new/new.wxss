@@ -1,0 +1,79 @@
+.wrapper{
+  padding: 0 20rpx;
+}
+.slide{
+  margin-top: 40rpx;
+}
+.des{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  color: #fff;
+  margin: 30rpx 0 10rpx;
+}
+.tutorial{
+  color: #F4AFB2;
+}
+.frequent{
+  margin:40rpx 0; 
+  border-top: 1px solid #F4AFB2; 
+  border-bottom: 1px solid #F4AFB2; 
+  color: #fff;
+  padding: 10rpx 0;
+}
+.frequent .select{
+  margin: 10rpx 0;
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.frequent-form input{
+  background-color: #fff;
+  height: 40px;
+  padding-left: 40rpx;
+  color: #D95459;
+}
+.frequent-form .input-placeholder{
+  color: #F4AFB2;
+}
+.input-title{
+  margin-bottom: 10rpx;
+}
+.scenes{
+  margin-top: 30rpx;
+  display: flex;
+  flex-flow: row wrap;
+}
+.scene-item{
+  width: 33.3%;
+  text-align: center;
+  color: #fff;
+  line-height: 2;
+  position: relative;
+  margin: 20rpx 0;
+}
+.scene-item.active::after{
+  width: 70%;
+  content: "";
+  display: block;
+  border-bottom: 1px solid #fff;
+  margin: 0 auto;
+}
+.begin{
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 0;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.begin button{
+  background-color: #D95459;
+  color: #fff;
+}

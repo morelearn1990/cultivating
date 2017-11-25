@@ -1,0 +1,16 @@
+{
+    "name": "tomato",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [],
+    "author": "morelearn",
+    "license": "MIT",
+    "dependencies": {
+        "wafer2-client-sdk": "^1.0.0"
+    }
+}

@@ -1,0 +1,25 @@
+page{
+  background-color: #eee;
+  font-size: 14px;
+}
+.main-nav-group{
+  width: 720rpx;
+  padding-left:30rpx;
+  background-color: #fff;
+  border-top: 1px solid #bbb; 
+  border-bottom: 1px solid #bbb; 
+  margin-top: 20rpx;
+}
+.main-nav-item{
+  width: 100%;
+  padding: 15rpx 0;
+  position: relative;
+}
+.main-nav-item.border-bottom{
+  border-bottom: 1px solid #bbb;
+}
+.main-nav-item image{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}

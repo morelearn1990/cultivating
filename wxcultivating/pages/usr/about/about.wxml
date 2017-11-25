@@ -1,0 +1,13 @@
+<view class='main-nav-group'>
+    <view class='main-nav-item border-bottom'>
+      <text>关于 cultivating </text>
+    </view>
+    <view class='main-nav-item border-bottom'>
+      <text>作者</text>
+      <text class='blue text-right margin-right-20'>morelearn</text>
+    </view>
+    <view class='main-nav-item'>
+      <text>邮箱</text>
+      <text class='blue text-right margin-right-20'>morelearn1990@gmail.com</text>
+    </view>
+  </view>

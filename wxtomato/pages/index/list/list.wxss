@@ -1,0 +1,50 @@
+.items{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20rpx;
+}
+.item{
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+.item-title{
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: #D95459;
+  padding: 25rpx 0;
+}
+.item-title text{
+  margin: 0 30rpx;
+}
+.delete{
+  width: 150rpx;
+  background-color: #D95459;
+  text-align: center;
+  color: #fff;
+  padding: 25rpx 0; 
+  border: 1px solid #fff;
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px; 
+}
+.new-tomato{
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 20rpx 20rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: o;
+  z-index: 99;
+}
+.new-tomato-btn{
+  background-color: #D95459;
+  color: #fff;
+}

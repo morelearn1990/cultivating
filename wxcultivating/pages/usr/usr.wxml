@@ -1,0 +1,29 @@
+<view class="main">
+  <view class='main-info'>
+    <image src='../../img/user_bg.png' mode="widthFix"></image>
+    <view class='info'>
+      <image src='{{user.photo}}'></image>
+      <text style='font-size:18px;'>{{user.name}}</text>
+      <text style='color:#eee;font-size:12px;'>ID:{{user.id}}</text>
+    </view>
+  </view>
+  <view class='main-nav-group'>
+    <navigator url='./notify/notify' class='main-nav-item border-bottom'>
+      <text>通知</text>
+      <image style='width:19rpx;' src='../../img/Shape.png' mode="widthFix"></image>
+      <text class='notify-number' wx:if="{{ message }}"></text>
+    </navigator>
+    <navigator url='./appreciate/appreciate' class='main-nav-item border-bottom'>
+      <text>赞赏</text>
+      <image style='width:19rpx;' src='../../img/Shape.png' mode="widthFix"></image>
+    </navigator>
+    <navigator url='./about/about' class='main-nav-item'>
+      <text>关于</text>
+      <image style='width:19rpx;' src='../../img/Shape.png' mode="widthFix"></image>
+    </navigator>
+    <!-- <view class='main-nav-item'>
+      <text>意见反馈</text>
+      <image style='width:19rpx;' src='../../img/Shape.png' mode="widthFix"></image>
+    </view> -->
+  </view>
+</view>

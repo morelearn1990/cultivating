@@ -1,0 +1,8 @@
+<view class="main">
+  <text class='time'>{{timeText}}</text>
+  <view class='btn-group'>
+    <button class='running' wx:if="{{ started != true }}" bindtap='start'>开始</button>
+    <button class='running' wx:if="{{ started == true }}" bindtap='pause'>{{ stop == true ? "继续":"暂停"}}</button>
+    <button class='cancel' wx:if="{{ stop == true }}" bindtap='cancel'>放弃</button>
+  </view>
+</view>
