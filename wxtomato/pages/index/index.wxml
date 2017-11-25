@@ -37,7 +37,7 @@
     </scroll-view>
   </view>
   <view class='wrapper statistic'>
-    <navigator class='items-header clearfix' url='./statictis/statictis'>
+    <navigator class='items-header clearfix' url='./statistic/statistic'>
       <text class='title'>成长值</text>
       <text class='more-icon f-r'>></text>
     </navigator>

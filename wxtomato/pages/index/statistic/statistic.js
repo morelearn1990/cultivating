@@ -10,14 +10,14 @@ Page({
   },
   onLoad: function (options) {
     let _this = this;
-    let statictisData = app.getStatictis();
+    let statisticData = app.getStatistic();
 
     app.getUserInfo(function (userInfo) {
       _this.setData({
         userInfo
       })
     });
-    let statictis = {
+    let statistic = {
       count: [],
       duration: [],
       cycle: {
@@ -35,20 +35,19 @@ Page({
         }
       }
     };
-    let target = statictisData.total.target;
+    let target = statisticData.total.target;
 
     targetArr.forEach(function (item) {
-      statictis.count.push(target[item].count);
-      statictis.duration.push(target[item].duration);
+      statistic.count.push(target[item].count);
+      statistic.duration.push(target[item].duration);
     })
-
     _this.setData({
-      statictisData,
-      statictis
+      statisticData,
+      statistic
     })
-    this.cycleDay(statictisData);
-    this.drawPie(statictis.count, "targetCountCanvas")
-    this.drawPie(statictis.duration, "targetdurationCanvas")
+    this.cycleDay(statisticData);
+    this.drawPie(statistic.count, "targetCountCanvas")
+    this.drawPie(statistic.duration, "targetdurationCanvas")
   },
   promiseGetSystemInfo(fn) {
     wx.getSystemInfo({
@@ -57,12 +56,12 @@ Page({
       }
     })
   },
-  cycleDay: function (statictisData) {
-    if (!statictisData) return;
+  cycleDay: function (statisticData) {
+    if (!statisticData) return;
     let today = new Date();
     let labels = [], count = [], duration = [];
     let days = [];
-    let timeLine = statictisData.timeLine;
+    let timeLine = statisticData.timeLine;
 
     for (let i = 0; i < 7; i++) {
       days.unshift(formatTimeYMD(today))
@@ -78,12 +77,12 @@ Page({
     this.drawCycle(labels, duration, "durationCanvas");
     this.drawCycle(labels, count, "countCanvas");
   },
-  cycleWeek: function (statictisData) {
-    if (!statictisData) return;
+  cycleWeek: function (statisticData) {
+    if (!statisticData) return;
     let today = new Date();
     let labels = ["本周"], durations = [0], counts = [0];
     let weeks = [[]], index = 0;
-    let timeLine = statictisData.timeLine;
+    let timeLine = statisticData.timeLine;
 
     // 将7个星期时间按照每个周放入到一个二维数组里面，再来匹配时间线里面的时间，
     // 将每个周的次数和时长加起来
@@ -109,13 +108,13 @@ Page({
     this.drawCycle(labels, durations, "durationCanvas");
     this.drawCycle(labels, counts, "countCanvas");
   },
-  cycleMonth: function (statictisData) {
-    if (!statictisData) return;
+  cycleMonth: function (statisticData) {
+    if (!statisticData) return;
     let today = new Date();
     let month = today.getMonth() + 1;
     let year = today.getFullYear();
     let labels = [], durations = [], counts = [];
-    let timeLine = statictisData.timeLine;
+    let timeLine = statisticData.timeLine;
 
     for (let i = 0; i < 7; i++) {
       let label = year + "-" + month;
@@ -140,7 +139,7 @@ Page({
   },
   setCycle: function (e) {
     let cycle = e.currentTarget.dataset.cycle;
-    let data = this.data.statictisData;
+    let data = this.data.statisticData;
     switch (cycle) {
       case "month":
         this.cycleMonth(data);
@@ -172,14 +171,12 @@ Page({
     this.promiseGetSystemInfo(function (deviceInfo) {
       let width = Math.floor(deviceInfo.windowWidth * 340 / 750);
       let height = Math.floor(width / 1);
-      let labels = ["11-01", "11-02", "11-03", "11-04", "11-05", "11-06", "十二月"]
-      let dataa = [11, 22, 60, 120, 22, 46, 90]
       let canvasConfig = {
         width,
         height,
         id: canvasId,
       }
-      let config = getPieConfig(canvasConfig, labels, data)
+      let config = getPieConfig(canvasConfig, data)
       chartWrap.bind(pagethis)(config)
     });
   }

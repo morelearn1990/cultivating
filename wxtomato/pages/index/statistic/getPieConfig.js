@@ -1,7 +1,7 @@
 /**
  * Created by xiabingwu on 2016/11/21.
  */
-export default function (canvasConfig, labels, data) {
+export default function (canvasConfig, data) {
   var chartColors = {
     red: 'rgb(255, 99, 132)',
     orange: 'rgb(255, 159, 64)',

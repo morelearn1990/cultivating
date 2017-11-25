@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/index/running/running",
     "pages/index/list/list",
-    "pages/index/statictis/statictis",
+    "pages/index/statistic/statistic",
     "pages/index/new/new"
   ],
   "window":{

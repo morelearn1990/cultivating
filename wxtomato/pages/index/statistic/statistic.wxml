@@ -4,10 +4,10 @@
     <text class='user-name'>{{ userInfo.nickName }}</text>
     <text class='user-id'>{{ userInfo.id }}</text>
   </view>
-  <view class='cycle statictis'>
+  <view class='cycle statistic'>
     <view class='total'>
-      <text>总次数: <text class='total-n'>{{statictisData.total.count}}</text></text>
-      <text>总时长: <text class='total-n'>{{statictisData.total.duration}}</text></text>
+      <text>总次数: <text class='total-n'>{{statisticData.total.count}}</text></text>
+      <text>总时长: <text class='total-n'>{{statisticData.total.duration}}</text></text>
     </view>
     <view class='label'>
       <view class='label-item'>

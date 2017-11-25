@@ -4,25 +4,10 @@ import { formatTimeAll, formatTimeYMD } from "./utils/util.js"
 App({
   onLaunch: function () {
     // 展示本地存储能力
+
     let data = wx.getStorageSync('data') || {};
-    // this.globalData.frequent = data.frequent || [];
-    // this.globalData.recommend = data.recommend || [];
-    // this.globalData.statictis = data.statictis || {};
-  },
-  onHide: function () {
-    let data = {};
-    data.frequent = this.globalData.frequent;
-    data.recommend = this.globalData.recommend;
-    data.statictis = this.globalData.statictis;
-    wx.setStorage({
-      key: 'data',
-      data
-    })
-  },
-  globalData: {
-    userInfo: null,
-    frequent: [],
-    recommend: [
+    this.globalData.frequent = data.frequent || [];
+    this.globalData.recommend = data.recommend || [
       {
         id: "0000000001",
         name: "冥想",
@@ -50,67 +35,62 @@ App({
         count: 0,
         target: "READ"
       }
-    ],
-    statictis: {
-      timeLine: {
-        "2017-11-18":{
-          count:2,
-          duration:30
-        },
-        "2017-11-19": {
-          count: 3,
-          duration: 30
-        },
-        "2017-11-20": {
-          count: 2,
-          duration: 40
-        },
-        "2017-11-21": {
-          count: 4,
-          duration: 40
-        },
-        "2017-11-22": {
-          count: 5,
-          duration: 150
-        }
-      },
+    ];
+    this.globalData.statistic = data.statistic || {
+      timeLine: {},
       total: {
-        count: 16,
-        duration: 290,
+        count: 0,
+        duration: 0,
         target: {
-          "STUDY":{
-            count:3,
-            duration:30
+          "STUDY": {
+            count: 0,
+            duration: 0
           },
-          "READ":{
-            count:4,
-            duration:50
+          "READ": {
+            count: 0,
+            duration: 0
           },
           "WORK": {
-            count: 4,
-            duration: 50
+            count: 0,
+            duration: 0
           },
           "GAME": {
-            count: 4,
-            duration: 50
+            count: 0,
+            duration: 0
           },
           "THINK": {
-            count: 4,
-            duration: 50
+            count: 0,
+            duration: 0
           },
           "SPORT": {
-            count: 4,
-            duration: 50
+            count: 0,
+            duration: 0
           }
         }
       },
       logs: {}
-    }
+    };
   },
-  addStatictis: function (data) {
-    let logs = this.globalData.statictis.logs;
-    let timeLine = this.globalData.statictis.timeLine;
-    let total = this.globalData.statictis.total;
+  onHide: function () {
+    let data = {};
+    data.frequent = this.globalData.frequent;
+    data.recommend = this.globalData.recommend;
+    data.statistic = this.globalData.statistic;
+    wx.setStorage({
+      key: 'data',
+      data
+    })
+  },
+  globalData: {
+    userInfo: null,
+    frequent: [],
+    recommend: [],
+    statistic: {}
+  },
+  addStatistic: function (data) {
+    let logs = this.globalData.statistic.logs;
+    let timeLine = this.globalData.statistic.timeLine;
+    let total = this.globalData.statistic.total;
 
     let date = new Date();
     let dateAllStr = formatTimeAll(date);
@@ -162,8 +142,8 @@ App({
   getRecommend: function () {
     return this.globalData.recommend;
   },
-  getStatictis: function () {
-    return this.globalData.statictis;
+  getStatistic: function () {
+    return this.globalData.statistic;
   },
   setUserInfo: function (data) {
     this.globalData.userInfo = data;
@@ -175,6 +155,7 @@ App({
     this.globalData.recommend = data;
   },
   appLogin: function (fn) {
+    let _this = this;
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -183,7 +164,7 @@ App({
           wx.authorize({
             scope: 'scope.userInfo',
             success() {
-              this.appUserInfo(fn);
+              _this.appUserInfo(fn);
             }
           })
         }
@@ -198,7 +179,7 @@ App({
         fn && fn(userInfo);
       }
     })
-  }, 
+  },
   getGid: (function () {//全局唯一id
     let id = 0
     return function () {
